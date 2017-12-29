@@ -2,10 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.bat
+!run_game.bat
+!run_game_vs_python_EDIT_ME.bat
 # C extensions
 *.so
-
+DerSchwarm_submit/
 # Distribution / packaging
 .Python
 env/
@@ -58,7 +60,8 @@ local_settings.py
 # Flask stuff:
 instance/
 .webassets-cache
-
+# Java 
+*.class
 # Scrapy stuff:
 .scrapy
 
