@@ -25,12 +25,12 @@ public class AdvancedSettler {
             undocked_ship_counter = 0;
             for (final Ship ship : gameMap.getMyPlayer().getShips().values()) {
             	
-            	undocked_ship_counter++;
+            	
             	
                 if (ship.getDockingStatus() != Ship.DockingStatus.Undocked) {
                     continue;
                 }
-                
+                undocked_ship_counter++;
                 for (Planet planet : gameMap.getAllPlanets().values()) {
 
                     if (planet.isFull() ||( planet.getOwner() != gameMap.getMyPlayerId()&& planet.isOwned())) {
@@ -38,6 +38,8 @@ public class AdvancedSettler {
                     }
                     if (undocked_ship_counter == 2)
                     	planet = gameMap.getPlanet(6);
+                    if (undocked_ship_counter == 8)
+                    	planet = gameMap.getPlanet(9);
 
                     if (ship.canDock(planet)) {
                         moveList.add(new DockMove(ship, planet));
