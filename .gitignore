@@ -5,6 +5,7 @@ __pycache__/
 *.bat
 !run_game.bat
 !run_game_vs_python_EDIT_ME.bat
+!run_gameSettler_VS_AdvancedSettler.bat
 # C extensions
 *.so
 DerSchwarm_submit/
